@@ -5,7 +5,7 @@
 
 #include "vec2.h"
 
-typedef enum { white, red, black, pink, blue, brown, green, yellow, } BallType;
+typedef enum { BALL_WHITE, BALL_RED, BALL_BLACK, BALL_PINK, BALL_BLUE, BALL_BROWN, BALL_GREEN, BALL_YELLOW, } BallType;
 
 typedef struct {
 	Vec2 pos;

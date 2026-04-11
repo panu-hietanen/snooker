@@ -15,6 +15,7 @@ void vec2_println(Vec2 a)
 
 void ball_print(const Ball* b)
 {
+	printf("Type %d, ", b->type);
 	printf("vel = ");
 	vec2_print(b->vel);
 	printf(" @ ");

@@ -1,6 +1,9 @@
 #include "raylib.h"
 
 #include "config.h"
+#include "utils.h"
+#include "ball.h"
+#include "camera.h"
 
 #define COLOR_FELT   GetColor(0x1e7d1cff)
 #define COLOR_WHITE  GetColor(0xfff9c3ff)
@@ -16,9 +19,16 @@
 
 int main(void)
 {
+    Ball b = {
+        .pos = (Vec2) {.x = 0, .y = 0 },
+        .vel = (Vec2) {.x = 0, .y = 0 },
+        .type = BALL_WHITE
+    };
+
+    ball_println(&b);
+
     InitWindow(1280, 720, "snooker");
     SetTargetFPS(60);
-
     while (!WindowShouldClose())
     {
         BeginDrawing();

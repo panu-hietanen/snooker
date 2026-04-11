@@ -18,7 +18,9 @@ add_executable(snooker
     src/vec2.c
     src/ball.c
     src/utils.c
-)
+    src/camera.c
+    src/table.c
+  )
 
 target_include_directories(snooker PRIVATE src)
 
