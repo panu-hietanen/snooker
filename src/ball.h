@@ -13,7 +13,7 @@ typedef struct {
 	BallType type;
 } Ball;
 
-Ball ball_init(Vec2 pos, Vec2 vel, int type);
+Ball ball_init(Vec2 pos, Vec2 vel, BallType type);
 
 typedef struct {
 	Ball* data;
@@ -25,6 +25,5 @@ BallArray ball_array_init (size_t capacity);
 void      ball_array_push (BallArray* arr, const Ball b);
 void      ball_array_pop  (BallArray* arr);
 void      ball_array_free (BallArray* arr);
-void      ball_array_print(BallArray* arr);
 
 #endif //BALL_H__
