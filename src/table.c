@@ -39,9 +39,10 @@ Table table_init()
         },
         .pocket_radius = TABLE_POCKET_RADIUS,
 
-        .baulk_x  = baulk_x,
-        .d_radius = TABLE_D_RADIUS,
-        .d_centre = { .x = baulk_x, .y = 0.0 },
+        .baulk_top = { .x = -hw, .y = -hh },
+        .baulk_x   = baulk_x,
+        .d_radius  = TABLE_D_RADIUS,
+        .d_centre  = { .x = baulk_x, .y = 0.0 },
 
         // All spots on the centreline (y = 0) except yellow and green,
         // which sit on the baulk line offset by the D radius.

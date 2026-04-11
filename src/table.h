@@ -13,6 +13,7 @@ typedef struct {
     Vec2   pocket_pos[POCKET_COUNT]; // clockwise from baulk-top
     double pocket_radius;
 
+    Vec2   baulk_top;
     double baulk_x;             // x of the baulk line (negative = baulk/left end)
     double d_radius;
     Vec2   d_centre;            // on baulk line, at y = 0

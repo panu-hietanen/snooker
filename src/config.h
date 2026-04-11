@@ -10,7 +10,7 @@
 // Window
 #define SCREEN_W                1280
 #define SCREEN_H                720
-#define SCREEN_SCALE            0.05
+#define SCREEN_SCALE            0.32
 #define ZOOM_SPEED              0.1
 
 // Table (mm, origin at table centre)
