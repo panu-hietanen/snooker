@@ -3,6 +3,7 @@
 
 #include "camera.h"
 #include "table.h"
+#include "ball.h"
 
 void table_draw(const SimCamera* camera, const Table* table);
 void table_cushion_draw(const SimCamera* camera, const Table* table);
