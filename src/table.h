@@ -27,6 +27,4 @@ typedef struct {
 
 Table table_init();
 
-void table_draw();
-
 #endif // TABLE_H__

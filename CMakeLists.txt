@@ -20,7 +20,8 @@ add_executable(snooker
     src/utils.c
     src/camera.c
     src/table.c
-  )
+    src/render.c
+   )
 
 target_include_directories(snooker PRIVATE src)
 
