@@ -16,7 +16,8 @@
 // Table (mm, origin at table centre)
 #define TABLE_W                 3569.0
 #define TABLE_H                 1778.0
-#define TABLE_CUSHION_T         45.0
+#define TABLE_CUSHION_T         45.0    // green felt cushion (collision boundary)
+#define TABLE_WOOD_T            80.0    // outer wood frame (visual only)
 #define TABLE_POCKET_RADIUS     85.0
 #define TABLE_BAULK_FROM_BOTTOM 737.0
 #define TABLE_D_RADIUS          292.0

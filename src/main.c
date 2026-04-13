@@ -4,22 +4,26 @@
 #include "colours.h"
 #include "utils.h"
 #include "ball.h"
+#include "layout.h"
 #include "camera.h"
 #include "render.h"
 
 int main(void)
 {
-    Ball b = {
-        .pos = (Vec2) {.x = 0, .y = 0 },
-        .vel = (Vec2) {.x = 0, .y = 0 },
-        .type = BALL_BLUE,
-        .bool_draw = 1,
-    };
+    //Ball b = {
+    //    .pos = (Vec2) {.x = 0, .y = 0 },
+    //    .vel = (Vec2) {.x = 0, .y = 0 },
+    //    .type = BALL_BLUE,
+    //    .bool_draw = 1,
+    //};
 
-    ball_println(&b);
+    //ball_println(&b);
+
 
     Table table = table_init();
     SimCamera camera = { .offset = vec2_zeroed(), .scale = SCREEN_SCALE };
+    BallArray arr = ball_array_init(22);
+    layout_rack(&arr, &table);
 
     InitWindow(1280, 720, "snooker");
     SetTargetFPS(60);
@@ -29,7 +33,7 @@ int main(void)
         {
             ClearBackground(SKYBLUE);
             table_draw(&camera, &table);
-            ball_draw(&camera, &b);
+            ball_array_draw(&camera, &arr);
             //DrawCircle(100, SCREEN_H / 2, 40, COLOR_WHITE);
             //DrawCircle(200, SCREEN_H / 2, 40, COLOR_RED);
             //DrawCircle(300, SCREEN_H / 2, 40, COLOR_BLACK);

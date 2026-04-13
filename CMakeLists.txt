@@ -20,6 +20,7 @@ add_executable(snooker
     src/utils.c
     src/camera.c
     src/table.c
+    src/layout.c
     src/render.c
    )
 

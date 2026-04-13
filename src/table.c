@@ -23,19 +23,24 @@ Table table_init()
     // Black: 324 mm inward from the top/right cushion face.
     double black_x = hw - TABLE_BLACK_FROM_TOP;
 
+    double hwp = hw + TABLE_CUSHION_T / 2;
+    double hhp = hh + TABLE_CUSHION_T / 2;
+    
+
     return (Table) {
         .width    = TABLE_W,
         .height   = TABLE_H,
         .cushion_t = TABLE_CUSHION_T,
+        .wood_t    = TABLE_WOOD_T,
 
         // Pockets, clockwise from baulk-top corner.
         .pocket_pos = {
-            { .x = -hw, .y = -hh }, // baulk-top
-            { .x =  0,  .y = -hh }, // top-mid
-            { .x = +hw, .y = -hh }, // top-right
-            { .x = +hw, .y = +hh }, // bottom-right
-            { .x =  0,  .y = +hh }, // bottom-mid
-            { .x = -hw, .y = +hh }, // baulk-bottom
+            { .x = -hwp, .y = -hhp }, // baulk-top
+            { .x =  0,  .y = -hhp }, // top-mid
+            { .x = +hwp, .y = -hhp }, // top-right
+            { .x = +hwp, .y = +hhp }, // bottom-right
+            { .x =  0,  .y = +hhp }, // bottom-mid
+            { .x = -hwp, .y = +hhp }, // baulk-bottom
         },
         .pocket_radius = TABLE_POCKET_RADIUS,
 

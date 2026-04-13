@@ -5,10 +5,11 @@
 
 #define POCKET_COUNT 6
 
-typedef struct {
+typedef struct Table {
     double width;               // long axis, along x  (3569 mm)
     double height;              // short axis, along y  (1778 mm)
-    double cushion_t;
+    double cushion_t;           // green felt cushion depth (collision boundary)
+    double wood_t;              // outer wood frame depth (visual only)
 
     Vec2   pocket_pos[POCKET_COUNT]; // clockwise from baulk-top
     double pocket_radius;
