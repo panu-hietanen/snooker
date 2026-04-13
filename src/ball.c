@@ -1,17 +1,19 @@
 #include <stdlib.h>
 
+#include "colours.h"
 #include "ball.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // BALL
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-Ball ball_init(Vec2 pos, Vec2 vel, BallType type)
+Ball ball_init(Vec2 pos, Vec2 vel, BallType type, int draw)
 {
 	return (Ball) {
 		.pos = pos,
 		.vel = vel,
 		.type = type,
+		.bool_draw = draw,
 	};
 }
 

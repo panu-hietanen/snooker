@@ -12,7 +12,8 @@ int main(void)
     Ball b = {
         .pos = (Vec2) {.x = 0, .y = 0 },
         .vel = (Vec2) {.x = 0, .y = 0 },
-        .type = BALL_WHITE
+        .type = BALL_BLUE,
+        .bool_draw = 1,
     };
 
     ball_println(&b);
@@ -26,9 +27,9 @@ int main(void)
     {
         BeginDrawing();
         {
-            ClearBackground(BLACK);
+            ClearBackground(SKYBLUE);
             table_draw(&camera, &table);
-
+            ball_draw(&camera, &b);
             //DrawCircle(100, SCREEN_H / 2, 40, COLOR_WHITE);
             //DrawCircle(200, SCREEN_H / 2, 40, COLOR_RED);
             //DrawCircle(300, SCREEN_H / 2, 40, COLOR_BLACK);

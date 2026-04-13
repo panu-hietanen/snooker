@@ -11,9 +11,10 @@ typedef struct {
 	Vec2 pos;
 	Vec2 vel;
 	BallType type;
+	int bool_draw;
 } Ball;
 
-Ball ball_init(Vec2 pos, Vec2 vel, BallType type);
+Ball ball_init(Vec2 pos, Vec2 vel, BallType type, int draw);
 
 typedef struct {
 	Ball* data;
